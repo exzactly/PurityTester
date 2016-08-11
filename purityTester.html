@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yuri purity test</title>
+	<style type="text/css">
+		#header{
+/*			margin-top: 0px;
+			padding-top: 0px;
+			border-top: none;*/
+/*			position: absolute;			
+			top: 0px;*/
+			padding-bottom: 5px;
+			text-align: center;
+			background-color: lightsalmon;
+		}
+		h1{
+			text-decoration: underline;
+		}
+		span{
+			font-style: italic;
+			font-weight: bold;
+		}
+		body{
+			background-color: pink;
+/*			font-family: verdana;
+*//*			text-align: left;
+			background-image: url(kms.jpg);
+			background-repeat: repeat-y;
+			background-position: right;*/
+		}
+		p{
+			font-size: 17px;
+		}
+		#yuripic{
+			height: 120px;
+		}
+
+	</style>
+	<script type="text/javascript">
+		function calcScore(){
+
+			var form = document.forms[0];
+			var count = 0;
+			var checkboxes = 0;
+			for (var i = 0; i < form.elements.length; i++) {
+				if (form.elements[i].type == 'checkbox'){
+					checkboxes++;
+					if (form.elements[i].checked){
+						count++;
+					}
+				}
+			}
+			var score = checkboxes - count;
+			alert("your purity score was "+ score);
+			// alert("why");
+
+		}
+	</script>
+</head>
+
+<body>
+	<div id="header">
+		<h1>Zack's Purity Test</h1>
+		<img src="yuriz.jpg" id="yuripic" />		
+		<h3>Inspired by the Rice Purity Test</h3>
+		<p><i>This will be a test of your purity. Warning: This list is not a bucketlist, and completion of the list may result in <span>death </span>.</i></p>
+
+	</div>
+	
+	<p>Check off all applicable checkboxes</p> <hr />
+	<form onsubmit= "calcScore();" method="post" action="purityTester.html">
+		<ol>
+			<li><input type="checkbox" name="1"> Heard of anime </li>
+			<li><input type="checkbox" name="2"> Watched an entire anime series</li>
+			<li><input type="checkbox" name="3"> Refer to Japanese animation as anime</li>
+			<li><input type="checkbox" name="4"> Get upset when people call anime cartoons</li>
+			<li><input type="checkbox" name="5"> Have a favorite anime character</li>
+			<li><input type="checkbox" name="6"> Say words like 'nani' or 'sodesune' even though you don't know Japanese</li>
+			<li><input type="checkbox" name="7"> Know the 'word' weaboo</li>
+			<li><input type="checkbox" name="8"> Watched a yuri anime</li>
+			<li><input type="checkbox" name="9"> Get offended by the word weaboo</li>
+			<li><input type="checkbox" name="10"> Tried to learn Japanese purely by watching anime</li>
+			<li><input type="checkbox" name="11"> Watched YuruYuri</li>
+			<li><input type="checkbox" name="12"> Is named Nick</li>
+
+<!-- 			<li> <input type="checkbox" value="17" name="fields[]">
+  rice purity website example?		
+ -->		</ol>
+ 		<input type="submit" name="submit" id="submit" >
+ 		<input type="reset" name="reset">
+	</form>
+
+</body>
+</html>
